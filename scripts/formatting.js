@@ -144,7 +144,7 @@ function degreesToDirection(degree) {
 }
 
 function setDay() {
-    document.body.style.backgroundImage = "url('images/Daytime.jpg')";
+    document.body.style.backgroundImage = "url('https://raw.githubusercontent.com/spadmanaban25/Weather-Application-2023/main/images/Daytime.jpg')";
     document.body.style.backgroundRepeat = "no-repeat";
     document.body.style.backgroundSize = "cover";
     let pDiv = document.getElementById("WeatherResult").querySelectorAll('p');
@@ -152,7 +152,7 @@ function setDay() {
 }
 
 function setNight() {
-    document.body.style.backgroundImage = "url('images/NightTime2.jpg')";
+    document.body.style.backgroundImage = "url('https://raw.githubusercontent.com/spadmanaban25/Weather-Application-2023/main/images/NightTime.jpg')";
     document.body.style.backgroundRepeat = "no-repeat";
     document.body.style.backgroundSize = "cover";
     let pDiv = document.getElementById("WeatherResult").querySelectorAll('p');

@@ -237,14 +237,14 @@ async function getWeatherAndTimeData(cityId) {
         if (document.getElementById("WindIcon") == null) {
             let windIcon = document.createElement('img');
             windIcon.setAttribute("id", "WindIcon");
-            windIcon.src = "images/WindSpeedOriginal.png";
+            windIcon.src = "https://raw.githubusercontent.com/spadmanaban25/Weather-Application-2023/main/images/WindSpeedOriginal.png";
             document.getElementById("WindInfo").insertBefore(windIcon, document.getElementById('AddWeather').querySelector('#WindSpeed'));
         }
 
         if (document.getElementById("HumidityIcon") == null) {
             let humidityIcon = document.createElement('img');
             humidityIcon.setAttribute("id", "HumidityIcon");
-            humidityIcon.src = "images/Humidity.png";
+            humidityIcon.src = "https://raw.githubusercontent.com/spadmanaban25/Weather-Application-2023/main/images/Humidity.png";
             document.getElementById("HumidInfo").insertBefore(humidityIcon, document.getElementById('AddWeather').querySelector('#Humidity'));
         }
 
