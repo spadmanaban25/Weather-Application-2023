@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<body>
+
+    <head>
+        <title>Weather App 2023</title>
+        <link rel="icon" type="image/x-icon" href="images/favicon2.ico">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="/scripts/weather.js"></script>
+        <script src="/scripts/formatting.js"></script>
+
+    </head>
+    <html>
+    <div id="MainDisplay">
+        <form autocomplete="off" id="SearchCity">
+            <div id="SearchBar">
+                <label for="search">Search City</label>
+                <input id="search" type="search" placeholder="Search City" />
+            </div>
+            <ul class="list"></ul>
+            <button id="cityBtn" type="submit"><i class="fa fa-search"></i></button>
+        </form><br><br>
+        <div id="WeatherResult">
+            <p id="CityName"></p><br><br><br>
+            <img id="WeatherIcon" width="150" height="150">
+            <p id="Description"></p><br><br><br>
+            <a href="index.html" id="CityTempBtn">
+                <p id="CityTemp"></p>
+            </a><br>
+            <div id="LowHigh">
+                <p id="LowTemp"></p>
+                <p id="HighTemp"></p>
+            </div><br><br><br><br>
+            <p id="CityTime"></p><br><br>
+            <div id="AddWeather">
+                <div id="HumidInfo">
+                    <p id="Humidity"></p>
+                </div>
+                <div id="WindInfo">
+                    <p id="WindSpeed"></p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    </html>
+</body>

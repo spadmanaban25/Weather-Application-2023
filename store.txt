@@ -1,0 +1,57 @@
+ .then(response => {
+                if (response.ok) {
+                    return response.json();
+                } else {
+                    alert("Data Not Valid");
+                }
+            })
+
+.then(data => {
+
+                const regionNames = new Intl.DisplayNames(['en'], { type: 'region' });
+                let display = document.getElementById('WeatherResult');
+
+                let cityName = data.name;
+                let countryName = regionNames.of(data.sys.country);
+                let fullName = cityName + ", " + countryName;
+
+                let cityTemp = Math.round(Number(data.main.temp));
+                let highTemp = Math.round(Number(data.main.temp_max));
+                let lowTemp = Math.round(Number(data.main.temp_min));
+
+                let humidity = data.main.humidity;
+                let windDirection = degreesToDirection(data.wind.deg);
+                let windSpeed = Math.round(Number(data.wind.speed)).toString() + " mph";
+
+
+
+                display.getElementsByTagName('p')[0].innerHTML = fullName;
+                display.getElementsByTagName('p')[2].innerHTML = cityTemp.toString() + " \xB0F";
+                display.getElementsByTagName('p')[3].innerHTML = "Low: " + lowTemp.toString() + " \xB0F";
+                display.getElementsByTagName('p')[4].innerHTML = "High: " + highTemp.toString() + " \xB0F";
+                display.getElementsByTagName('p')[6].innerHTML = "Humidity: " + humidity.toString() + "%";
+                display.getElementsByTagName('p')[7].innerHTML = "Wind Speed: " + windDirection + " " + windSpeed;
+
+            }),
+
+
+
+ .then(response => {
+                if (response.ok) {
+                    return response.json();
+                } else {
+                    alert("Time Not Valid");
+                }
+            })
+            .then(data => {
+
+                let display = document.getElementById('WeatherResult');
+
+                let receivedDateTime = JSON.stringify(data.datetime);
+                let formattedDate = formatDate(receivedDateTime);
+                let formattedTime = formatTime(receivedDateTime);
+
+                display.getElementsByTagName('p')[5].innerHTML = formattedDate.toString() + "<br><br>" + formattedTime;
+
+            })
+            
