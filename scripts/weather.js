@@ -165,7 +165,7 @@ async function getWeatherAndTimeData(cityId) {
 
         // If country is USA, then include the US State with the city
         if (countryName === 'United States' && !nameOfCity.toLowerCase().includes("dc")) {
-            let longLatURL = 'http://api.openweathermap.org/geo/1.0/reverse?lat=' + weatherData.coord.lat +
+            let longLatURL = 'https://api.openweathermap.org/geo/1.0/reverse?lat=' + weatherData.coord.lat +
                 '&lon=' + weatherData.coord.lon + '&appid=d9c329b6561c13cd10871ec409d0f923';
             try {
                 let longLatResponse = await fetch(longLatURL);
